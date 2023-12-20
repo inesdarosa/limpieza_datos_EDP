@@ -1,12 +1,14 @@
-''' Los nombres estan en distinta forma, están pegados, y hay casos
-que siendo la misma persona están escritos diferentes. Esto es lo que 
-quiero arreglar. '''
+''' Los nombres estan en distinta forma, hay casos que siendo la 
+misma persona están escritos diferentes. Esto es lo que quiero arreglar.
+Además, para el caso de la planilla de Evaluación homogenizo los cursos '''
 
 import numpy as np 
 import pandas as pd 
 import os
 import re
 import unidecode
+
+# PLANILLA INSCRIPCION
 
 os.chdir('G:/Mi unidad/proy_silvana/planillas/Insc_EVAI_CSV_2/inscripcion')
 
@@ -60,7 +62,7 @@ new_insc_general_ordenada['Nombre y Apellido'].head(30)
 new_insc_general_ordenada.to_csv('new_insc_general_2.csv')
 
 
-# Lo que sigue para EVALUACION
+# Lo que sigue es para la PLANILLA DE EVALUACION
 
 os.chdir('G:/Mi unidad/proy_silvana/planillas/Insc_EVAI_CSV_2/evaluacion')
 
@@ -101,7 +103,7 @@ for i in range(len(Eval_18_19_20_21_mod['Dirección de correo electrónico'])-1)
 Eval_18_19_20_21_mod.to_csv('Eval_18_19_20_21_mod_1.csv')
 
 
-# Ahora voy a tratar de modificar el nombre de los cursos
+# Ahora voy a modificar el nombre de los cursos para homogeneizarlos
 
 eval_cursos = pd.read_csv('eval_cursos_editado.csv')
 eval_cursos.columns.values

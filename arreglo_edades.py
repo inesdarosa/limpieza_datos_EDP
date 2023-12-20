@@ -2,7 +2,11 @@
 antes para poder comparar con las tablas por año que tienen las edades
 correctas, tengo que igualarlas por el nombre, poner la misma columna nombre y 
 appellido de las tablas individuales que las generales. Luego de hacer
-esto, sí voy a ver como hago para arreglar las edades'''
+esto, sí voy a ver como hago para arreglar las edades.
+
+Espcificamnete acá creo un código para arreglar las edades que es testado
+en la planilla de Inscripción. Además homogeneizo el nombre de los cursos
+'''
 
 import numpy as np 
 import pandas as pd 
@@ -73,7 +77,7 @@ for i in range(0, len(new_Incsr_general['Nombre y Apellido'])):
 #new_Incsr_general.to_csv('new_insc_general.csv')
 
 
-# Ahora voy a tratar de modificar el nombre de los cursos
+# Ahora voy modificar el nombre de los cursos para homogeneizarlos
 
 insc_cursos = pd.read_csv('insc_cursos_editado.csv')
 
